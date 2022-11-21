@@ -1,6 +1,6 @@
 ---
-title: "Talk title"
-author: "Daniel J. McDonald"
+title: "Applying to graduate school"
+author: "Daniel J. McDonald, Marie Auger Méthé and Matías Salibían-Barerra"
 date: "xx Month yyyy"
 output:
   xaringan::moon_reader:
@@ -41,6 +41,9 @@ primary = "#002145"
 secondary = "#6495ed"
 tertiary = "#ffa319"
 fourth_color = "#DB0B5B"
+pro = fa("thumbs-up", fill=secondary)
+con = fa("bomb", fill=fourth_color)
+
 
 style_duo_accent(
   primary_color      = primary,  #"#002145", # UBC primary
@@ -64,49 +67,515 @@ style_duo_accent(
 
 layout: true
 
-<div class="my-footer"><span><a href="https://dajmcdon.github.io/talktemplate" style="color:white">dajmcdon.github.io/talk-template</a></span></div> 
+<div class="my-footer"><span><a href="https://dajmcdon.github.io/grad-school-pointers" style="color:white">dajmcdon.github.io/grad-school-pointers</a></span></div> 
 
 ---
-background-image: url("gfx/cover.svg")
+background-image: url("gfx/cover.jpg")
 background-size: contain
 background-position: top
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
-.center[# Talk Title]
+# Applying to Graduate School
 
 
 .pull-left[
 ###Daniel J. McDonald
-###University of British Columbia
-####CMStatistics &mdash; xx Month yyyy
+###Marie Auger Méthé and 
+###Matías Salibían-Barerra
+#### 24 November 2022
 ]
 
-<!--
-
-Optional code to include QR links
-
-.pull-right[.center[.middle[
-<table>
-<tr>
-<td>![:scale 60%](gfx/qr-paper.png)</td>
-<td>![:scale 90%](gfx/qr-slides.png)</td>
-<td>![:scale 90%](gfx/qr-mywww.png)</td>
-</tr>
-<tr>
-<td>`r fa("file-alt")` Paper</td>
-<td>`r fa("chalkboard-teacher")` Slides</td>
-<td>`r fa("at")` My WWW</td>
-</tr>
-</table>
-]]]
-
-???
 
 
--->
+```{r qrcodes, include=FALSE, fig.width=2, fig.height=2, dev="png"}
+qrdat <- function(text, ecl = c("L", "M", "Q", "H")) {
+  x <- qrcode::qr_code(text, ecl)
+  n <- nrow(x)
+  s <- seq_len(n)
+  tib <- tidyr::expand_grid(x = s, y = rev(s))
+  tib$z <- c(x)
+  tib
+}
+allqr <- qrdat("https://dajmcdon.github.io/grad-school-pointers/")
+ggplot(allqr, aes(x, y, fill = z)) +
+  geom_raster() +
+  coord_equal(expand = FALSE) +
+  scale_fill_manual(values = c("white", primary), guide = "none") +
+  theme_void()
+```
+
+.pull-right.center[
+![:scale 40%](gfx/qrcodes-1.png)
+<br>
+]
+
+
+---
+
+## Quick introductions
+
+
+--
+
+<br><br><br><br><br><br>
+
+.emphasis[
+* Disclaimer: While I have collected these from many people, these reflect mainly my thinking. Opinions may (and do) differ.
+]
+
+---
+
+# Topics
+
+<br><br>
+
+## 1. Who is graduate school for?
+
+## 2. Types of programs
+
+## 3. Choosing where to apply
+
+## 4. Application materials
+
+## 5. Collected pointers
+
+## 6. Q & A
+
+
+---
+
+## 1. Who is graduate school for?
+
+.pull-left[
+
+* .secondary.large[Graduate school is NOT for everyone.]
+
+* It can be expensive. It delays employment. 
+
+* You may have to move long distances to a less desirable place.
+
+* You may have to leave your friends or romantic partner.
+
+* .secondary.large[It is NOT for "continuing to learn".]
+
+* It is not required for a fulfilling life.
+
+]
+
+--
+
+.pull-right[
+
+* Graduate school .secondary.large[MAY] improve your job prospects.
+
+* It may enable to a different career path.
+
+* It may give you skills you don't have.
+
+* It may give you a credential you don't have.
+
+* It may have Visa / immigration implications.
+]
+
+
+---
+
+## Step 1 of applying to graduate school
+
+--
+
+<br><br>
+
+.secondary.center.larger[Decide why you want to go to graduate school.]
+
+---
+
+## 2. Types of programs (in statistics / data science)
+
+<br><br>
+
+.large[
+* Professional Masters Degree
+
+* Course-based Masters Degree
+
+* Research Masters Degree
+
+* Direct-admit Doctoral Degree (PhD)
+]
+
+---
+
+## Professional Masters Degree
+
+<blockquote cite="Berkeley MA in Statistics Website">
+The focus is on tackling statistical challenges encountered by industry rather than preparing for a PhD
+</blockquote>
+
+* Typically costs `r fa("money-bill-1-wave", fill=tertiary)` `r fa("money-bill-1-wave", fill=tertiary)` `r fa("money-bill-1-wave", fill=tertiary)`
+
+* Large cohorts of students (50 &ndash; 200+).
+
+* 1 &ndash; 2 years long.
+
+* Focus on "skills"
+
+* Generally, the target audience is .large.secondary[NOT] students with a BSc in Statistics / CS 
+
+--
+
+Example programs
+
+UBC MDS, UofT MScAC, Berkeley MA in Statistics, CMU MSP, Columbia MS in Data Science or MA in Statistics, Michigan MS in Applied Statistics or Data Science, many others.
+
+---
+
+## Course-based Masters
+
+<blockquote cite="UofT Website">Our Master in Statistics program allows students the flexibility to build their studies around their interests. Our goal is to prepare you for your career of choice in statistics or data science.</blockquote>
+
+* Intended to prepare you for a PhD (or maybe a job after)
+
+* Usually 2 years.
+
+* There may or may not be funding (sometimes you TA or RA, sometimes not)
+
+--
+
+Example programs
+
+U of T MSc (optional small research project), Many programs in the US 
+
+---
+
+## Research Masters
+
+
+* Intended to prepare you for a PhD (or maybe a job after)
+
+* Usually 2 years.
+
+* There may or may not be funding (sometimes you TA or RA, sometimes not)
+
+* Required to write a Thesis or Project paper
+
+--
+
+Example programs
+
+UWaterloo MMath, McGill MSc, UBC Stat, programs in the UK
+
+---
+
+## Direct Admit PhD
+
+* Many programs in the US
+
+* MSc is an "off-ramp"
+
+* But these are now sufficiently competitive that many students already have an MSc...
+
+
+---
+
+## 3. Choosing where to apply
+
+* Think about your goals.
+
+* Be honest about your qualifications (more on these shortly)
+
+--
+
+<br>
+
+.secondary.large[If you want to go to grad school, you must consider many options]
+
+not just UBC, UofT, Berkeley, NYU and Harvard...
+
+---
+
+## Unfortunate honesty (sorry to be a downer)
+
+* Top programs receive 200 &ndash; 1000 applications
+
+* Top programs admit about 5% of applicants
+
+--
+<br><br>
+
+.large.emphasis[
+Assume 
+* everything is random 
+* probability of acceptance is 5%
+
+Then sending apps to 5 programs gives you about 23% chance of admission.]
+
+--
+
+UBC Stat
+
+* $\sim$ 500 applicants last year
+* My feeling is that about 20 &ndash; 30% strong enough, but we accept 5%
+
+---
+
+## How many programs to apply to
+
+```{r prob-accept, fig.align='center', fig.width=8, fig.height=4}
+tib <- tibble(
+  n_prog = 0:20,
+  `2%` = 1 - (1 - .02)^n_prog,
+  `5%` = 1 - (1 - .05)^n_prog,
+  `10%` = 1 - (1 - .1)^n_prog,
+  `20%` = 1 - (1 - .2)^n_prog) %>%
+  pivot_longer(-n_prog) %>%
+  mutate(name = factor(name, levels = c("2%", "5%", "10%", "20%")))
+ggplot(tib, aes(n_prog, value, color = name)) +
+  geom_line(linewidth = 2) +
+  scale_color_manual(values = c(primary, secondary, tertiary, fourth_color), name = "P(accept)") +
+  ylab("P(get in to ≥1 program)") +
+  xlab("number of applications sent") +
+  theme_bw(base_size = 18)
+```
+
+
+---
+
+## Lessons
+
+.emphasis.large[
+Don't only apply to top programs.
+
+Apply to many places, not 5.
+]
+
+--
+
+Costs:
+
+* There is an unfortunate application fee. 
+
+* Some effort with materials.
+
+* Perhaps different exams.
+
+--
+
+Don't worry about the letters. Once we agree, we'll do 5 or 25, you decide.
+
+
+---
+class: middle, inverse, center
+
+# 4. Materials - Your story
+
+---
+
+## Things I look for
+
+.pull-left[
+
+.large.secondary[Positives]
+
+1. Motivation (for statistics and for graduate study)
+
+1. Creativity
+
+1. Coding experience / facility
+
+1. Mathematical preparation
+
+1. Writing ability
+
+1. Diligence, drive, independence
+
+]
+
+--
+
+.pull-left[
+
+.secondary.large[Negatives]
+
+1. Indications you don't know what grad school is 
+
+1. Indications you don't know what statistics is
+
+1. Empty research projects
+
+1. Bad grades in advanced math / cs / stats
+
+1. Empty letters ("person took my class, got 87")
+
+1. Anything on the order of "I love classes and I want to do more"
+
+1. Severe difficulty writing
+
+]
 
 
 
+---
+
+## Transcript
+
+* Your grades matter less than you think
+
+* I'm looking to see "good" grades in upper level courses
+
+* But more, which courses have you taken?
+
+  * Real Analysis
+
+  * something with real coding
+
+  * something where you did a project
+
+--
+
+Real Analysis $=$ Math 320 and 321, `r fa("face-frown", fill=fourth_color)`
+
+This is a signal for "knows how to handle abstract mathematics, prove things, think rigorously"
+
+--
+
+For coding, I mean "in class" and Python / R / C++ / Fortran / Matlab. Not SAS or HTML.
+
+---
+
+## Personal statement
+
+* Use it to explain a bad grade or a bad semester
+
+* Use it to explain your motivation for .hand[graduate school] and for .hand[Statistics]
+
+* (Possibly) Use it to make a .hand[meaningful] connection with a particular person at a school
+
+* Use it to explain your interests (astrostatistics, MCMC methods, time-series modelling, etc)
+
+* Use it to describe other difficulties you've faced, skills you have, reasons to believe you can succeed
+
+---
+
+## Good and bad PS patterns
+
+.pull-left[
+`r pro` "I spent the last year working with Prof. XX on computational genetics. I'm really interested in biology applications, but it became clear that the biggest barrier was developing appropriate statistical methodology."
+
+`r pro` "My final project in STAT XXX investigated the impact of lockdowns on Google trends mobility during the COVID pandemic in California. The biggest thing I learned was the importance of reproducible, shareable code." 
+
+`r pro` "I really enjoy solving problems in lots of fields. Statistics allows for collaboration with experts on thorny data problems, and trying to reformulate them mathematically is very satisfying."
+]
+
+--
+
+.pull-right[
+`r con` "I spent the last year working with Prof. XX on computational genetics. I applied gradient boosting and the generalized linear model to answer the question."
+
+`r con` "My final project in STAT XXX investigated the impact of lockdowns on Google trends mobility during the COVID pandemic in California. We put our code on CRAN."
+
+`r con` "Famous Statistician John Tukey once said, 'The best thing about being a statistician is that you get to play in everyone’s backyard'. I absolutely agree with this statement, however, from another perspective, I say this best thing is also the worst thing."
+]
+
+
+
+---
+
+## Letters
+
+* We generally don't care "who" wrote your letter
+
+* The writer needs to .hand[know you] and be able to comment on your qualities
+
+* The famous person who taught your class of 400 is probably no good
+
+--
+
+Lesson from my own application:
+
+1. A teaching-track instructor I worked for as a grader for 3 terms. Also the UG advisor.
+2. A department chair I worked for in the summer. He knew me well.
+3. ~~A famous mathematician whose Stats course I took.~~
+4. My girlfriend's dad who was a math professor at a different university. 
+5. My boss at the research job between UG and PhD.
+
+--
+
+.emphasis[
+We don't care about the person's title, which course they taught you in, how many papers they published, etc.
+
+We .large[ONLY] care what they can tell us about .large[YOUR] abilities.
+]
+
+---
+
+## Asking for letters
+
+* First, ask yourself if this person knows you, if not, ask someone else.
+
+* Be prepared to send your unofficial transcript, your CV, and your personal statement.
+
+* This means those things need to be written. Also, the first due date. Give us at least 2 weeks (better if a month).
+
+* Don't send me a long email telling me how meaningful my course was to you or how great a teacher I am.
+
+* Tell my why .hand[I am qualified] to write for .hand[you]
+
+* That means .hand[remind me of some meaningful interactions we had.]
+
+--
+
+* If you can't do these things but need a letter, just say "Can you write me a generic letter so that I can have a third writer?"
+
+* Though a better "person doesn't know me letter" is likely to come from the UG advisor (sorry Bruce!)
+
+---
+
+## CV
+
+* This is a dangerous document.
+
+* It's greatest utility is that it has all your info in one place, and you made it.
+
+* So we can often cut people with it but not accept them with it.
+
+* It can be, and often is, a major negative. Usually do to "methods vomit".
+
+* All the same ideas as the PS apply. 
+
+* List projects, but describe what you .hand[learned] from them. 
+  * What was difficult? 
+  * How much effort did it take?
+  * Don't say "We fit KNN to some Kaggle data and used CV to improve the model" (this is the vomit)
+  
+---
+
+## 5. Collected pointers
+
+* Make sure your PS and CV are short, and to the point.
+
+* Use your PS (and/or CV) to tell us things we can't find elsewhere.
+
+* Emphasize any accomplishments you really want us to know in multiple places.
+
+* "research project descriptions" are often meaningless, avoid this outcome
+
+* Knowledge of multiple coding languages is good.
+
+* So are links to your personal Website or Github repo with nice clean code.
+
+* Same for papers.
+
+* Know your audience. What are faculty at .hand[this department] working on?
+
+* Don't say "I love ANOVA or `lm` or CNNs", this makes us think you have no idea what you're talking about.
+
+* Don't say "I knew from the age of 7 that I wanted a PhD in Statistics"
+
+---
+class: middle, inverse, center
+
+# Q & A
