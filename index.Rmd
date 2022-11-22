@@ -1,6 +1,6 @@
 ---
 title: "Applying to graduate school"
-author: "Daniel J. McDonald, Marie Auger Méthé and Matías Salibían-Barerra"
+author: "Daniel J. McDonald, Marie Auger-Méthé and Matías Salibián-Barrera"
 date: "xx Month yyyy"
 output:
   xaringan::moon_reader:
@@ -81,8 +81,8 @@ background-position: top
 
 .pull-left[
 ###Daniel J. McDonald
-###Marie Auger Méthé and 
-###Matías Salibían-Barerra
+###Marie Auger-Méthé and 
+###Matías Salibián-Barrera
 #### 24 November 2022
 ]
 
