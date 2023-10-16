@@ -1,6 +1,6 @@
 ---
 title: "Applying to graduate school"
-author: "Daniel J. McDonald, Marie Auger-Méthé and Matías Salibián-Barrera"
+author: "Daniel J. McDonald, Ben Bloem-Reddy, and Varada Kolhatkar"
 date: "xx Month yyyy"
 output:
   xaringan::moon_reader:
@@ -81,9 +81,9 @@ background-position: top
 
 .pull-left[
 ###Daniel J. McDonald
-###Marie Auger-Méthé and 
-###Matías Salibián-Barrera
-#### 24 November 2022
+###Ben Bloem-Reddy
+###Varada Lolhatkar
+#### 19 October 2023
 ]
 
 
@@ -313,10 +313,10 @@ Then sending apps to 5 programs gives you about 23% chance of admission.]
 
 --
 
-UBC Stat
+UBC Stat MSc
 
-* $\sim$ 500 applicants last year
-* My feeling is that about 20 &ndash; 30% strong enough, but we accept 5%
+* $\sim$ 300 total applicants last year
+* My feeling is that about 20 &ndash; 30% strong enough. We sent 20 offers.
 
 ---
 
@@ -334,6 +334,7 @@ tib <- tibble(
 ggplot(tib, aes(n_prog, value, color = name)) +
   geom_line(linewidth = 2) +
   scale_color_manual(values = c(primary, secondary, tertiary, fourth_color), name = "P(accept)") +
+  coord_cartesian(expand = FALSE, ylim = c(0, 1)) +
   ylab("P(get in to ≥1 program)") +
   xlab("number of applications sent") +
   theme_bw(base_size = 18)
@@ -494,8 +495,8 @@ For coding, I mean "in class" and Python / R / C++ / Fortran / Matlab. Not SAS o
 
 Lesson from my own application:
 
-1. A teaching-track instructor I worked for as a grader for 3 terms. Also the UG advisor.
-2. A department chair I worked for in the summer. He knew me well.
+1. A teaching-track Econ instructor I worked for as a grader for 3 terms. Also the UG advisor.
+2. Economics department chair I worked for in the summer. He knew me well.
 3. ~~A famous mathematician whose Stats course I took.~~
 4. My girlfriend's dad who was a math professor at a different university. 
 5. My boss at the research job between UG and PhD.
@@ -540,14 +541,14 @@ We .large[ONLY] care what they can tell us about .large[YOUR] abilities.
 
 * So we can often cut people with it but not accept them with it.
 
-* It can be, and often is, a major negative. Usually do to "methods vomit".
+* It can be, and often is, a major negative. Usually do to "methods vomit". 🤮
 
 * All the same ideas as the PS apply. 
 
 * List projects, but describe what you .hand[learned] from them. 
   * What was difficult? 
   * How much effort did it take?
-  * Don't say "We fit KNN to some Kaggle data and used CV to improve the model" (this is the vomit)
+  * Don't say "We fit KNN to some Kaggle data and used CV to improve the model " 🤮🤮
   
 ---
 
