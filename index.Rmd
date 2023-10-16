@@ -564,7 +564,7 @@ We .large[ONLY] care what they can tell us about .large[YOUR] abilities.
 
 * Knowledge of multiple coding languages is good.
 
-* So are links to your personal Website or Github repo with nice clean code.
+* So are links to your personal Website or GitHub repo with nice clean code.
 
 * Same for papers.
 
