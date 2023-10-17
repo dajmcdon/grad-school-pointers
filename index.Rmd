@@ -1,6 +1,6 @@
 ---
 title: "Applying to graduate school"
-author: "Daniel J. McDonald, Ben Bloem-Reddy, and Varada Kolhatkar"
+author: "Daniel J. McDonald, Ben Bloem-Reddy, and Matías Salibián-Barrera"
 date: "xx Month yyyy"
 output:
   xaringan::moon_reader:
@@ -82,7 +82,7 @@ background-position: top
 .pull-left[
 ###Daniel J. McDonald
 ###Ben Bloem-Reddy
-###Varada Lolhatkar
+###Matías Salibián-Barrera
 #### 19 October 2023
 ]
 
