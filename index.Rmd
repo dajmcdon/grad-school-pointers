@@ -591,7 +591,9 @@ Generally, graduate stipend (once admitted) will not cover your expenses.
 
 This is an unfortunate reality. It's worse in expensive places.
 
-NYU MSc in Data Science costs >$40K per year. And you need to afford NYC. No financial aid.
+* NYU MSc in Data Science costs >$40K per year. And you need to afford NYC. No financial aid.
+
+* UofT MSc in Stat costs $7K domestic or $30K international.
 
 This is an investment of time, money, effort, stress. Really think about this.
 
